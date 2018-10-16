@@ -1,3 +1,4 @@
+'use strict'
 function intertwine(a, b) {
     var i;
     var counter = 0;
@@ -103,3 +104,43 @@ function convertToFahrenheit(celsius) {
     return ("Temperature of " + celsius + " celsius is " + fahrenheit + " Fahrenheit ");
 }
 console.log(convertToFahrenheit(30));
+
+
+// 7. Write a function to find the maximum element in array of numbers.Filter out all non - number elements.
+
+function findMax(array) {
+    var i;
+    var maxElement = 0;
+    for (i = 0; i < array.length; i++) {
+        if (array[i] > maxElement && typeof array[i] == 'number') {
+            maxElement = array[i]
+        }
+
+
+    }
+    return maxElement;
+}
+console.log(findMax([2, 3, 4, 5, 9, "f", "sdaw", 67]));
+
+// 8. Write a function to find the maximum and minimum elements. Function returns an array.
+
+function findMaxAndMin(array) {
+    var i;
+    var maxElement = 0;
+    var minElement = 0;
+    for (i = 0; i < array.length; i++) {
+        if (array[i] > maxElement && typeof array[i] == 'number') {
+            maxElement = array[i]
+        }
+        if (array[i] < minElement && typeof array[i] == 'number') {
+            minElement = array[i]
+
+
+        }
+        result = [minElement, maxElement];
+
+    }
+    return result;
+
+}
+console.log(findMaxAndMin([89, 99, 443, 54, -2, -345, 994949]));
